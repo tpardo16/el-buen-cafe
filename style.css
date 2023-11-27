@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+/*===== ===== GENERALES ===== =====*/
+.contenedor{
+    width: 90%;
+    max-width: 110rem;
+    margin: 0 auto;
+    height: 100%;
+}
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+p{
+    font-size: 1.6rem;
+}
+span{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+i{
+    font-size: 5rem;
+    color: #eee;
+}
+h1{
+    font-size: 11rem;
+    margin-top: 10rem;
+    color: #eee;
+    font-family: 'Yellowtail', cursive;
+}
+h2{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+h2::first-letter{
+    margin-left: 0.5rem;
+}
+h3{
+    font-size: 4.5rem;
+}
+.boton1{
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #111;
+    border-bottom: 1px solid #111;
+}
+
+
+/*===== ===== NAVEGACION ===== =====*/
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 3.9rem;
+    transition: all 0.5s ease;
+}
+nav .contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+nav a{
+    padding: 0 2%;
+    padding-bottom: 1rem;
+    color: #eee;
+    border-bottom: 3px solid transparent;
+    position: relative;
+}
+nav .enlaces__nav::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #eee;
+    transition: all .2s ease-in;
+}
+nav a:hover::before{
+    width: 100%;
+}
+.navJs{
+    padding-top: 1.5rem;
+    background: #eee;
+}
+nav .enlaceJs{
+    color: #111;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+nav .enlaceJs::before{
+    content: "";
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #0f3438;
+    transition: all .2s ease-in;
+}
+nav .enlaceJs:hover::before{
+    width: 100%;
+}
+
+
+/*===== ===== HEADER ===== =====*/
+header{
+    background: url(img/banner1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-height: 650px;
+}
+header .filtro{
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    background: rgba(1, 1, 1, 0.5);
+}
+header .contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+header .texto{
+    color: #eee;
+    text-align: center;
+}
+header .texto i{
+    padding-top: 2rem;
+}
+
+
+/*===== ===== MENU ===== =====*/
+main{
+    background: rgb(223, 223, 223);
+    height: 100vh;
+    min-height: 650px;
+}
+main .contenedor{
+    padding-top: 9rem;
+}
+main .texto{
+    text-align: center;
+}
+main .texto h2{
+    font-size: 2rem;
+}
+main .texto span{
+    font-size: 3.5rem;
+}
+main .platillos{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: center;
+}
+main .platillos .plato{
+    text-align: center;
+    margin-top: 6rem;
+}
+main .platillos .plato span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+main .platillos .plato p{
+    margin-top: 1rem;
+}
+
+
+/*===== ===== CATEGORIAS ===== =====*/
+.categorias{
+    height: 100vh;
+    min-height: 600px;
+    background: url(img/banner2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.categorias .contenedor{
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+    grid-template-rows: 45% 45%;
+    justify-content: center;
+    align-content: center;
+}
+.categorias .caja{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+    margin: 1rem;
+}
+.categorias p{
+    text-align: center;
+    color: #eee;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    padding-top: 2rem;
+}
+
+
+/*===== ===== HISTORIA ===== =====*/
+.historia{
+    background: #fff;
+}
+.historia .contenedor{
+    padding: 9rem 0;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 49% 49%;
+    justify-content: center;
+    align-content: center;
+}
+.historia .imgBx{
+    position: relative;
+}
+.historia .imgBx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center center;
+}
+.historia .texto{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem;
+}
+.historia .texto h2{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+.historia .texto span{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+
+/*===== ===== RESEÑA ===== =====*/
+.reseñas{
+    background: rgb(223, 223, 223);
+    overflow: hidden;
+}
+.reseñas .caja{
+    height: 45rem;
+    margin: 9rem 0;
+    display: flex;
+}
+.reseñas .caja .texto{
+    width: 50%;
+}
+.reseñas .caja .imgBx{
+    width: 50%;
+}
+.reseñas .caja .imgBx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center center;
+}
+.reseñas .caja .texto{
+    padding: 3rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.reseñas .caja .texto span{
+    font-size: 3.9rem;
+}
+
+
+/*===== ===== ESPECIALES ===== =====*/
+.especiales .texto{
+    text-align: center;
+}
+.especiales span{
+    font-size: 3.5rem;
+}
+.especiales .contenedor {
+    padding-top: 9rem;
+}
+.especiales .postres{
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+}
+.especiales .postres img{
+    width: 32%;
+    height: 100%;
+    /* margin: .5rem; */
+}
+.especiales .centrarBoton{
+    text-align: center;
+    margin: 3.5rem;
+}
+
+
+/*===== ===== BANNERS ===== =====*/
+.banners{
+    height: auto;
+    display: flex;
+}
+.banners img{
+    width: 33.3%;
+}
+
+
+/*===== ===== FOOTER ===== =====*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e2e2e2;
+}
+footer .texto {
+    width: 90%;
+    max-width: 90rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 5rem 0;
+    line-height: 5;
+}
+footer .redes i{
+    color: #000;
+    margin: 0 1.5rem;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+footer .derechos{
+    width: 100%;
+    background: #000;
+    text-align: center;
+    margin-top: 3rem;
+}
+footer .derechos p{
+    color: #eee;
+    padding: .5rem;
+}
+
+
+/*===== ===== MEDIA QUERY ===== =====*/
+@media (max-width: 935px){
+    /* header*/
+    header h1{
+        font-size: 8rem;
+    }
+    header .texto h3{
+        font-size: 3.3rem;
+    }
+    /*menu*/
+    main .platillos .plato p{
+        font-size: 1.4rem;
+    }
+    /*historia*/
+    .historia .texto p{
+        font-size: 1.4rem;
+    }
+    /*reseñas*/
+    .reseñas .caja .texto span{
+        font-size: 3rem;
+    }
+    .reseñas .caja .texto p{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 800px){
+    /*menu*/
+    main{
+        height: 1050px;
+    }
+    main .platillos{
+        grid-template-columns: 100%;
+    }
+    /*categorias*/
+    .categorias{
+        height: 1050px;
+    }
+    .categorias .contenedor{
+        grid-template-columns: 42% 42%;
+        grid-template-rows: 28% 28% 28%;
+    }
+    /*historia*/
+    .historia .contenedor{
+        padding: 1rem 0;
+        grid-template-columns: 42% 42%;
+        grid-template-rows: 28% 28% 28%;
+    }
+    .historia .contenedor .imgBx,
+    .historia .contenedor .texto{
+        margin-bottom: 2rem;
+    }
+    /*reseñas*/
+    .reseñas .caja{
+        height: 30rem;
+    }
+}
+
+@media (max-width: 700px){
+    /*reseñas*/
+    .reseñas{
+        display: flex;
+    }
+    .reseñas .caja{
+        height: 70rem;
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .reseñas .caja .texto{
+        text-align: center;
+        width: 100%;
+        height: 50%;
+    }
+    .reseñas .caja .imgBx{
+        margin: 0 auto;
+        width: 90%;
+        height: 50%;
+    }
+}
+
+@media(max-width: 768px){
+    .especiales .postres{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    } 
+    .especiales .postres img{
+        margin: .5rem;
+        width: 80%;
+    }
+
+    .banners{
+        display: block;
+    }
+    .banners img{
+        vertical-align: top;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    /*categorias*/
+    .categorias{
+        padding: 80px 0;
+        height: 1800px;
+    }
+    .categorias .contenedor{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .categorias .contenedor .caja{
+        width: 300px;
+        height: 300px;
+    }
+     /*historia*/
+     .historia .contenedor{
+        padding-top: 9rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .historia .contenedor .imgBx,
+    .historia .contenedor .texto{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 475px){
+    /*menu*/
+    main{
+        height: 1150px;
+    }
+    footer .contenedor{
+        flex-direction: column;
+    }
+    .footer__texto{
+        margin: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 435px){
+    /*header*/
+    header h1{
+        font-size: 6rem;
+    }
+    header .texto i{
+        font-size: 3.5rem;
+    }
+}
